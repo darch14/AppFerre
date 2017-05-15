@@ -16,6 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Lista_Registros" />
+        <activity android:name=".Registrar_Empleado" />
+        <activity android:name=".Registrar_Cliente" />
+        <activity android:name=".Registrar_Material" />
+        <activity android:name=".Listas" />
+        <activity android:name=".ListaEmpleados" />
+        <activity android:name=".Lista_Clientes" />
+        <activity android:name=".Listado_Materiales" />
+        <activity android:name=".Reportes"></activity>
     </application>
 
 </manifest>

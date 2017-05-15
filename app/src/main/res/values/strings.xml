@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Namantert</string>
+    <string name="cedula">Cedula</string>
+    <string name="buscar">BUSCAR</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="edad">Edad</string>
+    <string name="puesto_laboral">Puesto laboral</string>
+    <string name="sexo">Sexo</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="guardar">GUARDAR</string>
+    <string name="modificar">MODIFICAR</string>
+    <string name="eliminar">ELIMINAR</string>
+    <string name="borrar">BORRAR</string>
+    <string name="telefono">Telefono</string>
+    <string name="codigo">Codigo</string>
+    <string name="tipo_material">Tipo del material</string>
+    <string name="nombre_material">Nombre del Material</string>
+    <string name="precio">Precio</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="numero">N°</string>
+    <string name="tipo">Tipo</string>
 </resources>
