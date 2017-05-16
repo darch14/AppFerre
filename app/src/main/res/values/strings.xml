@@ -59,4 +59,11 @@
         <item>@string/bodeguero</item>
         <item>@string/repartidor</item>
     </string-array>
+
+    <string name="empleado_guardado">Empleado guardado exitosamente</string>
+
+    <string name="error_cajacedula">Por favor digite la cedula</string>
+    <string name="error_cajanombre">Por favor digite el nombre</string>
+    <string name="error_cajaapellido">Por favor digite el apellido</string>
+    <string name="error_cajaedad">Por favor digite la edad</string>
 </resources>

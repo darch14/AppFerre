@@ -88,7 +88,7 @@ public class Empleado {
         String sql;
 
         //Abrir la conexion de base de datos en modo escritura
-        EmpleadosSQLiteOpenHelper aux=new EmpleadosSQLiteOpenHelper(contexto,"BDEmpleados",null,1);
+        EmpleadosSQLiteOpenHelper aux=new EmpleadosSQLiteOpenHelper(contexto,"DBEmpleados",null,1);
         db=aux.getWritableDatabase();
 
         //insertar

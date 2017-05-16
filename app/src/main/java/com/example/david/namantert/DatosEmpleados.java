@@ -24,7 +24,7 @@ public class DatosEmpleados {
         db=aux.getReadableDatabase();
 
         //Cursor
-        sql="select * from Empleados";
+        sql="select foto, cedula, nombre, apellido, edad, puesto, sexo from Empleados";
         Cursor c=db.rawQuery(sql,null);
 
         //Recorrido del cursor

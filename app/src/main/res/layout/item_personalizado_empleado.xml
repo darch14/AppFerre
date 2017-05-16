@@ -27,6 +27,7 @@
             android:layout_alignTop="@+id/imgFotoEmpleado"
             android:layout_centerHorizontal="true"
             android:text="TextView"
+            android:textColor="@android:color/black"
             android:textSize="18sp" />
 
         <TextView
@@ -38,6 +39,7 @@
             android:layout_below="@+id/txtCedulaEmpleadoP"
             android:layout_marginTop="14dp"
             android:text="TextView"
+            android:textColor="@android:color/black"
             android:textSize="18sp" />
 
         <TextView
@@ -49,6 +51,7 @@
             android:layout_below="@+id/txtNombreEmpleadoP"
             android:layout_marginTop="20dp"
             android:text="TextView"
+            android:textColor="@android:color/black"
             android:textSize="18sp" />
     </RelativeLayout>
 </LinearLayout>
