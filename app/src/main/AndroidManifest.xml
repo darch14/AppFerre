@@ -21,7 +21,7 @@
         <activity android:name=".Registrar_Cliente" />
         <activity android:name=".Registrar_Material" />
         <activity android:name=".Listas" />
-        <activity android:name=".ListaEmpleados" />
+        <activity android:name=".Lista_Empleados" />
         <activity android:name=".Lista_Clientes" />
         <activity android:name=".Listado_Materiales" />
         <activity android:name=".Reportes"></activity>

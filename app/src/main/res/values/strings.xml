@@ -21,4 +21,42 @@
     <string name="cantidad">Cantidad</string>
     <string name="numero">N°</string>
     <string name="tipo">Tipo</string>
+
+    <string name="registrar">REGISTRAR</string>
+    <string name="listados">LISTADOS</string>
+    <string name="reportes">REPORTES</string>
+    <string-array name="opciones_principal">
+        <item>@string/registrar</item>
+        <item>@string/listados</item>
+        <item>@string/reportes</item>
+    </string-array>
+    <string name="empleado">EMPLEADO</string>
+    <string name="cliente">CLIENTE</string>
+    <string name="material">MATERIAL</string>
+    <string-array name="opciones_registros">
+        <item>@string/empleado</item>
+        <item>@string/cliente</item>
+        <item>@string/material</item>
+    </string-array>
+    <string-array name="opciones_listas">
+        <item>@string/empleado</item>
+        <item>@string/cliente</item>
+        <item>@string/material</item>
+    </string-array>
+    <string name="gerente">Gerente</string>
+    <string name="vendedor">Vendedor</string>
+    <string name="contador">Contador</string>
+    <string name="empleado_mostrador">Empleado de mostrador</string>
+    <string name="cajero">Cajero</string>
+    <string name="bodeguero">Bodeguero</string>
+    <string name="repartidor">Repartidor</string>
+    <string-array name="opciones_puestos">
+        <item>@string/gerente</item>
+        <item>@string/vendedor</item>
+        <item>@string/contador</item>
+        <item>@string/empleado_mostrador</item>
+        <item>@string/cajero</item>
+        <item>@string/bodeguero</item>
+        <item>@string/repartidor</item>
+    </string-array>
 </resources>
