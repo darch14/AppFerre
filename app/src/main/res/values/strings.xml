@@ -60,7 +60,13 @@
         <item>@string/repartidor</item>
     </string-array>
 
+    <string name="confirmacion">Confirmación</string>
+    <string name="mensaje_confirmacion">¿Está seguro que desea eliminar este empleado?</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="cancelar">Cancelar</string>
+
     <string name="empleado_guardado">Empleado guardado exitosamente</string>
+    <string name="empleado_eliminado">Empleado eliminado exitosamente</string>
 
     <string name="error_cajacedula">Por favor digite la cedula</string>
     <string name="error_cajanombre">Por favor digite el nombre</string>

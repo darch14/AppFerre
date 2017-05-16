@@ -104,4 +104,20 @@ public class Empleado {
 
         db.close();
     }
+
+    public void eliminar(Context contexto){
+        //declarar las variables
+        SQLiteDatabase db;
+        String sql;
+
+        //Abrir la conexion de base de datos en modo escritura
+        EmpleadosSQLiteOpenHelper aux=new EmpleadosSQLiteOpenHelper(contexto,"DBEmpleados",null,1);
+        db=aux.getWritableDatabase();
+
+        //insertar
+        sql="DELETE FROM Empleados where cedula='"+this.getCedula()+"'";
+        db.execSQL(sql);
+
+        db.close();
+    }
 }

@@ -1,6 +1,8 @@
 package com.example.david.namantert;
 
+import android.content.DialogInterface;
 import android.content.res.Resources;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -61,6 +63,15 @@ public class Registrar_Empleado extends AppCompatActivity {
         return true;
     }
 
+    public boolean validarCedula(){
+        if (cajaCedula.getText().toString().isEmpty()){
+            cajaCedula.setError(res.getString(R.string.error_cajacedula));
+            cajaCedula.requestFocus();
+            return false;
+        }
+        return true;
+    }
+
     public void guardar(View v){
         String foto,cedula,nombre,apellido,edad,puesto,sexo;
         Empleado e;
@@ -79,6 +90,8 @@ public class Registrar_Empleado extends AppCompatActivity {
 
             Toast.makeText(getApplicationContext(), res.getString(R.string.empleado_guardado),
                     Toast.LENGTH_SHORT).show();
+
+            limpiar();
         }
     }
 
@@ -87,4 +100,75 @@ public class Registrar_Empleado extends AppCompatActivity {
         int numero = (int)(Math.random() * 3);
         return Fotos[numero];
     }
+
+    public void limpiar(){
+        cajaCedula.setText("");
+        cajaNombre.setText("");
+        cajaApellido.setText("");
+        cajaEdad.setText("");
+        comboPuesto.setSelection(0);
+        rMasculino.setChecked(true);
+        cajaCedula.requestFocus();
+    }
+    public void borrar(View v){
+        limpiar();
+    }
+
+    public void buscar(View v){
+        Empleado e;
+        if (validarCedula()){
+            e=DatosEmpleados.buscarEmpleados(getApplicationContext(),cajaCedula.getText().toString());
+            if (e!=null){
+                cajaNombre.setText(e.getNombre());
+                cajaApellido.setText(e.getApellido());
+                cajaEdad.setText(e.getedad());
+
+                if (e.getpuesto().equalsIgnoreCase(res.getString(R.string.gerente)))comboPuesto.setSelection(0);
+                if (e.getpuesto().equalsIgnoreCase(res.getString(R.string.vendedor)))comboPuesto.setSelection(1);
+                if (e.getpuesto().equalsIgnoreCase(res.getString(R.string.contador)))comboPuesto.setSelection(2);
+                if (e.getpuesto().equalsIgnoreCase(res.getString(R.string.empleado_mostrador)))comboPuesto.setSelection(3);
+                if (e.getpuesto().equalsIgnoreCase(res.getString(R.string.cajero)))comboPuesto.setSelection(4);
+                if (e.getpuesto().equalsIgnoreCase(res.getString(R.string.bodeguero)))comboPuesto.setSelection(5);
+                if (e.getpuesto().equalsIgnoreCase(res.getString(R.string.repartidor)))comboPuesto.setSelection(6);
+
+                if (e.getsexo().equalsIgnoreCase(res.getString(R.string.masculino)))rMasculino.setChecked(true);
+                else rFemanino.setChecked(true);
+            }
+        }
+    }
+
+    public void eliminar(View v){
+        Empleado e;
+        if (validarCedula()){
+            e=DatosEmpleados.buscarEmpleados(getApplicationContext(),cajaCedula.getText().toString());
+            if (e!=null){
+                AlertDialog.Builder ventana = new AlertDialog.Builder(this);
+                ventana.setTitle(res.getString(R.string.confirmacion));
+                ventana.setMessage(res.getString(R.string.mensaje_confirmacion));
+
+                ventana.setPositiveButton(res.getString(R.string.confirmar), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Empleado e;
+                        e = DatosEmpleados.buscarEmpleados(getApplicationContext(), cajaCedula.getText().toString());
+
+                        e.eliminar(getApplicationContext());
+                        limpiar();
+                        Toast.makeText(getApplicationContext(), res.getString(R.string.empleado_eliminado),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                ventana.setNegativeButton(res.getString(R.string.cancelar), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        cajaCedula.requestFocus();
+                    }
+                });
+
+                ventana.show();
+            }
+        }
+    }
+
 }
