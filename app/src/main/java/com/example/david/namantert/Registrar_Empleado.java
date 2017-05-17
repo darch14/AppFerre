@@ -171,4 +171,28 @@ public class Registrar_Empleado extends AppCompatActivity {
         }
     }
 
+    public void modificar(View v){
+        Empleado e,e1;
+        String nombre,apellido,edad,puesto,sexo;
+        if (validarCedula()){
+            e=DatosEmpleados.buscarEmpleados(getApplicationContext(),cajaCedula.getText().toString());
+            if (e!=null){
+                nombre=cajaNombre.getText().toString();
+                apellido=cajaApellido.getText().toString();
+                edad=cajaEdad.getText().toString();
+                puesto=comboPuesto.getSelectedItem().toString();
+                if (rMasculino.isChecked())sexo=res.getString(R.string.masculino);
+                else sexo=res.getString(R.string.femenino);
+
+                e1=new Empleado(e.getFoto(),e.getCedula(),nombre,apellido,edad,puesto,sexo);
+                e1.modificar(getApplicationContext());
+                Toast.makeText(getApplicationContext(), res.getString(R.string.empleado_modificado),
+                        Toast.LENGTH_SHORT).show();
+
+
+                limpiar();
+            }
+        }
+    }
+
 }
