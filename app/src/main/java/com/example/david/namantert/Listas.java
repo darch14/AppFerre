@@ -33,11 +33,11 @@ public class Listas extends AppCompatActivity {
                         startActivity(i);
                         break;
                     case 1:
-                        i=new Intent(Listas.this,Lista_Clientes.class);
+                        i=new Intent(Listas.this,Listado_Materiales.class);
                         startActivity(i);
                         break;
                     case 2:
-                        i=new Intent(Listas.this,Listado_Materiales.class);
+                        i=new Intent(Listas.this,Listado_Registro_Compras.class);
                         startActivity(i);
                         break;
                 }

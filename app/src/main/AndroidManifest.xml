@@ -18,13 +18,14 @@
         </activity>
         <activity android:name=".Lista_Registros" />
         <activity android:name=".Registrar_Empleado" />
-        <activity android:name=".Registrar_Cliente" />
         <activity android:name=".Registrar_Material" />
         <activity android:name=".Listas" />
         <activity android:name=".Lista_Empleados" />
-        <activity android:name=".Lista_Clientes" />
         <activity android:name=".Listado_Materiales" />
-        <activity android:name=".Reportes"></activity>
+        <activity android:name=".Reportes" />
+        <activity android:name=".Compras_Registro_Clientes" />
+        <activity android:name=".Listado_Registro_Compras" />
+        <activity android:name=".Compra"></activity>
     </application>
 
 </manifest>

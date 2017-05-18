@@ -33,10 +33,6 @@ public class Lista_Registros extends AppCompatActivity {
                         startActivity(i);
                         break;
                     case 1:
-                        i=new Intent(Lista_Registros.this,Registrar_Cliente.class);
-                        startActivity(i);
-                        break;
-                    case 2:
                         i=new Intent(Lista_Registros.this,Registrar_Material.class);
                         startActivity(i);
                         break;

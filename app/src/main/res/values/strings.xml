@@ -25,23 +25,25 @@
     <string name="registrar">REGISTRAR</string>
     <string name="listados">LISTADOS</string>
     <string name="reportes">REPORTES</string>
+    <string name="compras">COMPRAS</string>
     <string-array name="opciones_principal">
         <item>@string/registrar</item>
         <item>@string/listados</item>
         <item>@string/reportes</item>
+        <item>@string/compras</item>
     </string-array>
     <string name="empleado">EMPLEADO</string>
     <string name="cliente">CLIENTE</string>
     <string name="material">MATERIAL</string>
+    <string name="registro_compras">REGISTR DE LAS COMPRAS</string>
     <string-array name="opciones_registros">
         <item>@string/empleado</item>
-        <item>@string/cliente</item>
         <item>@string/material</item>
     </string-array>
     <string-array name="opciones_listas">
         <item>@string/empleado</item>
-        <item>@string/cliente</item>
         <item>@string/material</item>
+        <item>@string/registro_compras</item>
     </string-array>
     <string name="gerente">Gerente</string>
     <string name="vendedor">Vendedor</string>
@@ -73,4 +75,7 @@
     <string name="error_cajanombre">Por favor digite el nombre</string>
     <string name="error_cajaapellido">Por favor digite el apellido</string>
     <string name="error_cajaedad">Por favor digite la edad</string>
+    <string name="siguiente">SIGUIENTE</string>
+    <string name="agregar">AGREGAR</string>
+    <string name="comprar">COMPRAR</string>
 </resources>
