@@ -45,6 +45,8 @@
         <item>@string/material</item>
         <item>@string/registro_compras</item>
     </string-array>
+
+    <!--spinner de puestos Empleado-->
     <string name="gerente">Gerente</string>
     <string name="vendedor">Vendedor</string>
     <string name="contador">Contador</string>
@@ -62,11 +64,12 @@
         <item>@string/repartidor</item>
     </string-array>
 
+    <!--mensaje de eliminacion-->
     <string name="confirmacion">Confirmación</string>
     <string name="mensaje_confirmacion">¿Está seguro que desea eliminar este empleado?</string>
     <string name="confirmar">Confirmar</string>
     <string name="cancelar">Cancelar</string>
-
+    <!--mensajes de botones-->
     <string name="empleado_guardado">Empleado guardado exitosamente</string>
     <string name="empleado_eliminado">Empleado eliminado exitosamente</string>
     <string name="empleado_modificado">Empleado modificado exitosamente</string>
@@ -78,4 +81,53 @@
     <string name="siguiente">SIGUIENTE</string>
     <string name="agregar">AGREGAR</string>
     <string name="comprar">COMPRAR</string>
+
+    <!--Spiner de Material Tipo -->
+    <string name="vacio"></string>
+    <string name="cerradura">Cerradura</string>
+    <string name="electricidad">Electricidad</string>
+    <string name="tornilleria">Tornilleria</string>
+    <string-array name="opciones_tipo">
+        <item>@string/cerradura</item>
+        <item>@string/electricidad</item>
+        <item>@string/tornilleria</item>
+    </string-array>
+    <!--Spiner de Material Nombre -->
+    <string name="cerradura_alta_ceguridad">Cerradura de alta seguridad</string>
+    <string name="cerradura_digital">Cerradura digital</string>
+    <string name="cerradura_manija">Cerradura de manija</string>
+    <string name="cerradura_pomo">Cerradura de pomo</string>
+    <string-array name="opciones_cerradura">
+        <item>@string/cerradura_alta_ceguridad</item>
+        <item>@string/cerradura_digital</item>
+        <item>@string/cerradura_manija</item>
+        <item>@string/cerradura_pomo</item>
+    </string-array>
+    <string name="canalizacion">Canalizacion</string>
+    <string name="extenciones">Extenciones</string>
+    <string name="tacos">Tacos</string>
+    <string-array name="opciones_electricidad">
+        <item>@string/canalizacion</item>
+        <item>@string/extenciones</item>
+        <item>@string/tacos</item>
+    </string-array>
+    <string name="chazos_anclajes">Chazos y Anclajes</string>
+    <string name="clavos">Clavos</string>
+    <string name="remaches">Remaches</string>
+    <string name="tornillos">Tornillos</string>
+    <string-array name="opciones_tornillos">
+        <item>@string/chazos_anclajes</item>
+        <item>@string/clavos</item>
+        <item>@string/remaches</item>
+        <item>@string/tornillos</item>
+    </string-array>
+
+    <!--Errores de material-->
+    <string name="error_codigo">Dijite el codigo</string>
+    <string name="error_precio">Dijite el precio</string>
+    <string name="error_cantidad">Dijite la cantidad</string>
+    <string name="error_codigo_existente">El codigo dijitado ya existe</string>
+
+    <!--Mensajes de material-->
+    <string name="material_guardado">Mateial guardado exitosamente</string>
 </resources>

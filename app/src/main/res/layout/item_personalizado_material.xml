@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtCodigoMaterialP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="TextView"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtNombreMaterialP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="TextView"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/txtCodigoMaterialP"
+            android:layout_alignLeft="@+id/txtCodigoMaterialP"
+            android:layout_alignStart="@+id/txtCodigoMaterialP" />
+
+        <TextView
+            android:id="@+id/txtPrecioMaterialP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="TextView"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/txtNombreMaterialP"
+            android:layout_alignLeft="@+id/txtNombreMaterialP"
+            android:layout_alignStart="@+id/txtNombreMaterialP" />
+
+        <TextView
+            android:id="@+id/txtCantidadMaterialP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtPrecioMaterialP"
+            android:layout_alignStart="@+id/txtPrecioMaterialP"
+            android:layout_below="@+id/txtPrecioMaterialP"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/imgFotoMaterial"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/txtCodigoMaterialP"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            app:srcCompat="@drawable/imgtornillos" />
+    </RelativeLayout>
+</LinearLayout>
