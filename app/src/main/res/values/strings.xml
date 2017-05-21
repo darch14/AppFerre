@@ -130,4 +130,7 @@
 
     <!--Mensajes de material-->
     <string name="material_guardado">Mateial guardado exitosamente</string>
+    <string name="mensaje_confirmacion_material">¿Está seguro que desea eliminar este material?</string>
+    <string name="material_eliminado">Mateial eliminado exitosamente</string>
+    <string name="material_modificado">Mateial modificado exitosamente</string>
 </resources>

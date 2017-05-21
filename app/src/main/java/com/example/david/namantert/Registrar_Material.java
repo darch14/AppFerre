@@ -1,6 +1,8 @@
 package com.example.david.namantert;
 
+import android.content.DialogInterface;
 import android.content.res.Resources;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -170,6 +172,60 @@ public class Registrar_Material extends AppCompatActivity implements AdapterView
                 if (m.getNombre().equalsIgnoreCase(res.getString(R.string.clavos)))comboNombre.setSelection(1);
                 if (m.getNombre().equalsIgnoreCase(res.getString(R.string.remaches)))comboNombre.setSelection(2);
                 if (m.getNombre().equalsIgnoreCase(res.getString(R.string.tornillos)))comboNombre.setSelection(3);*/
+            }
+        }
+    }
+
+    public void eliminar(View v){
+        Material m;
+        if (validarCodigo()){
+            m=DatosMateriales.buscarMateriales(getApplicationContext(),cajaCodigo.getText().toString());
+            if (m!=null){
+                AlertDialog.Builder ventana = new AlertDialog.Builder(this);
+                ventana.setTitle(res.getString(R.string.confirmacion));
+                ventana.setMessage(res.getString(R.string.mensaje_confirmacion_material));
+
+                ventana.setPositiveButton(res.getString(R.string.confirmar), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Material m;
+                        m = DatosMateriales.buscarMateriales(getApplicationContext(),cajaCodigo.getText().toString());
+
+                        m.eliminar(getApplicationContext());
+                        limpiar();
+                        Toast.makeText(getApplicationContext(), res.getString(R.string.material_eliminado),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                ventana.setNegativeButton(res.getString(R.string.cancelar), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        cajaCodigo.requestFocus();
+                    }
+                });
+
+                ventana.show();
+            }
+        }
+    }
+
+    public void modificar(View v){//solo se modificara el precio y la cantidad de los materiales
+        Material m,m2;
+        String precio,cantidad;
+        if (validarCodigo()){
+            m=DatosMateriales.buscarMateriales(getApplicationContext(),cajaCodigo.getText().toString());
+            if (m!=null){
+
+                precio=cajaPrecio.getText().toString();
+                cantidad=cajaCantidad.getText().toString();
+
+                m2=new Material(m.getFoto(),m.getCodigo(),m.getTipo(),m.getNombre(),precio,cantidad);
+                m2.modificar(getApplicationContext());
+
+                Toast.makeText(getApplicationContext(), res.getString(R.string.material_modificado),
+                        Toast.LENGTH_SHORT).show();
+                limpiar();
             }
         }
     }
