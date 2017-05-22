@@ -48,6 +48,21 @@
                         android:hint="@string/cedula"
                         android:inputType="number" />
 
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="buscar"
+                        android:text="@string/buscar" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
                     <EditText
                         android:id="@+id/txtNombreCliente"
                         android:layout_width="wrap_content"
@@ -56,12 +71,6 @@
                         android:ems="10"
                         android:hint="@string/nombre"
                         android:inputType="textPersonName" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/txtApellidoCliente"
@@ -72,15 +81,16 @@
                         android:hint="@string/apellido"
                         android:inputType="textPersonName" />
 
-                    <EditText
-                        android:id="@+id/txtTelefonoCliente"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:hint="@string/telefono"
-                        android:inputType="number" />
                 </LinearLayout>
+
+                <EditText
+                    android:id="@+id/txtTelefonoCliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/telefono"
+                    android:inputType="number" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -89,11 +99,12 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button4"
+                        android:id="@+id/button19"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/buscar" />
+                        android:onClick="guardar"
+                        android:text="@string/agregar" />
 
                     <Button
                         android:id="@+id/button3"
@@ -120,6 +131,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:onClick="modificar"
                         android:text="@string/modificar" />
 
                     <Button
@@ -127,10 +139,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:onClick="eliminar"
                         android:text="@string/eliminar" />
                 </LinearLayout>
 
                 <TableLayout
+                    android:id="@+id/tblCliente"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
@@ -164,6 +178,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/telefono" />
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/numero_compras" />
                     </TableRow>
 
                 </TableLayout>

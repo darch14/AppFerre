@@ -78,6 +78,8 @@
     <string name="error_cajanombre">Por favor digite el nombre</string>
     <string name="error_cajaapellido">Por favor digite el apellido</string>
     <string name="error_cajaedad">Por favor digite la edad</string>
+    <string name="error_cajatelefono">Por favor digite la telefono</string>
+    <string name="error_cedula_existente">La cedula ya existe</string>
     <string name="siguiente">SIGUIENTE</string>
     <string name="agregar">AGREGAR</string>
     <string name="comprar">COMPRAR</string>
@@ -133,4 +135,13 @@
     <string name="mensaje_confirmacion_material">¿Está seguro que desea eliminar este material?</string>
     <string name="material_eliminado">Mateial eliminado exitosamente</string>
     <string name="material_modificado">Mateial modificado exitosamente</string>
+
+    <!--Clientes-->
+    <string name="cliente_guardado">Cliente guardado exitosamente</string>
+    <string name="cliente_existe">No hay ningun cliente registrado con esa cedula</string>
+    <string name="mensaje_confirmacion_cliente">¿Está seguro que desea eliminar este cliente?</string>
+    <string name="cliente_eliminado">Cliente eliminado exitosamente</string>
+    <string name="cliente_modificado">Mateial modificado exitosamente</string>
+    <string name="numero_compras">Compras</string>
+
 </resources>
