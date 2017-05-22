@@ -12,6 +12,8 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class Registrar_Empleado extends AppCompatActivity {
     private EditText cajaCedula,cajaNombre,cajaApellido,cajaEdad;
     private Spinner comboPuesto;
@@ -72,26 +74,40 @@ public class Registrar_Empleado extends AppCompatActivity {
         return true;
     }
 
+    public boolean validarCedulaRepetido(){
+        ArrayList<Empleado> e=DatosEmpleados.traerEmpleados(getApplicationContext());
+        for (int i=0;i<e.size();i++){
+            if (e.get(i).getCedula().equalsIgnoreCase(cajaCedula.getText().toString())){
+                cajaCedula.setError(res.getString(R.string.error_cedula_existente));
+                cajaCedula.requestFocus();
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void guardar(View v){
         String foto,cedula,nombre,apellido,edad,puesto,sexo;
         Empleado e;
         if (validar()){
-            foto=String.valueOf(fotoAleatoria());
-            cedula=cajaCedula.getText().toString();
-            nombre=cajaNombre.getText().toString();
-            apellido=cajaApellido.getText().toString();
-            edad=cajaEdad.getText().toString();
-            puesto=comboPuesto.getSelectedItem().toString();
-            if (rMasculino.isChecked())sexo=res.getString(R.string.masculino);
-            else sexo=res.getString(R.string.femenino);
+            if (validarCedulaRepetido()){
+                foto=String.valueOf(fotoAleatoria());
+                cedula=cajaCedula.getText().toString();
+                nombre=cajaNombre.getText().toString();
+                apellido=cajaApellido.getText().toString();
+                edad=cajaEdad.getText().toString();
+                puesto=comboPuesto.getSelectedItem().toString();
+                if (rMasculino.isChecked())sexo=res.getString(R.string.masculino);
+                else sexo=res.getString(R.string.femenino);
 
-            e=new Empleado(foto,cedula,nombre,apellido,edad,puesto,sexo);
-            e.guardar(getApplicationContext());
+                e=new Empleado(foto,cedula,nombre,apellido,edad,puesto,sexo);
+                e.guardar(getApplicationContext());
 
-            Toast.makeText(getApplicationContext(), res.getString(R.string.empleado_guardado),
-                    Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), res.getString(R.string.empleado_guardado),
+                        Toast.LENGTH_SHORT).show();
 
-            limpiar();
+                limpiar();
+            }
         }
     }
 
