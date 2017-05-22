@@ -1,6 +1,7 @@
 package com.example.david.namantert;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,8 @@ public class Compras_Registro_Clientes extends AppCompatActivity {
     private Resources res;
     private TableLayout tabla;
     private ArrayList<Cliente> clien;
+    private Intent i;
+    private Bundle b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,8 @@ public class Compras_Registro_Clientes extends AppCompatActivity {
         cajaNombre=(EditText)findViewById(R.id.txtNombreCliente);
         cajaApellido=(EditText)findViewById(R.id.txtApellidoCliente);
         cajaTelefono=(EditText)findViewById(R.id.txtTelefonoCliente);
+        i = new Intent(this,Compra.class);
+        b = new Bundle();
 
         tabla();
     }
@@ -208,6 +213,9 @@ public class Compras_Registro_Clientes extends AppCompatActivity {
                 });
 
                 ventana.show();
+            }else {
+                Toast.makeText(getApplicationContext(), res.getString(R.string.cliente_existe),
+                        Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -229,6 +237,25 @@ public class Compras_Registro_Clientes extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
                 limpiar();
                 tabla();
+            }else {
+                Toast.makeText(getApplicationContext(), res.getString(R.string.cliente_existe),
+                        Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    public void compra(View v){
+        Cliente c;
+        if (validarCedula()){
+            c=DatosClientes.buscarClientes(getApplicationContext(),cajaCedula.getText().toString());
+            if (c!=null){
+                b.putString("nombre",c.getNombre());
+                b.putString("numero_compras",c.getNcompras());
+                i.putExtras(b);
+                startActivity(i);
+            }else {
+                Toast.makeText(getApplicationContext(), res.getString(R.string.cliente_existe),
+                        Toast.LENGTH_SHORT).show();
             }
         }
     }
