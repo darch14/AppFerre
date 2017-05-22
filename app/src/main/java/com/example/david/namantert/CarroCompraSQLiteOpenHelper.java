@@ -5,13 +5,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by david on 19/05/2017.
+ * Created by david on 22/05/2017.
  */
 
-public class MaterialesSQLiteOpenHelper extends SQLiteOpenHelper{
-    private String sql="CREATE TABLE Materiales(foto text,codigo text,tipo text, nombre text,precio text,cantidad text)";
+public class CarroCompraSQLiteOpenHelper  extends SQLiteOpenHelper{
+    private String sql="CREATE TABLE Carroscompras(ident text,nomaretial text,cantidad text,precio text)";
 
-    public MaterialesSQLiteOpenHelper(Context contexto, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public CarroCompraSQLiteOpenHelper(Context contexto, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(contexto, name, factory, version);
     }
 
@@ -22,7 +22,7 @@ public class MaterialesSQLiteOpenHelper extends SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("DROP TABLE EXISTS Materiales");
+        db.execSQL("DROP TABLE EXISTS Carroscompras");
         db.execSQL(sql);
     }
 }

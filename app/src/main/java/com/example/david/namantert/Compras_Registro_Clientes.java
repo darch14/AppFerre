@@ -249,8 +249,7 @@ public class Compras_Registro_Clientes extends AppCompatActivity {
         if (validarCedula()){
             c=DatosClientes.buscarClientes(getApplicationContext(),cajaCedula.getText().toString());
             if (c!=null){
-                b.putString("nombre",c.getNombre());
-                b.putString("numero_compras",c.getNcompras());
+                b.putString("cedula",c.getCedula());
                 i.putExtras(b);
                 startActivity(i);
             }else {

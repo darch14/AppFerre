@@ -72,4 +72,34 @@ public class DatosMateriales {
         db.close();
         return m;
     }
+
+    public static Material buscarPorNombreMateriales(Context contexto,String nom){
+
+        //Declarar variables
+        SQLiteDatabase db;
+        String sql,foto,codigo,tipo,nombre,precio,cantidad;
+        Material m=null;
+
+        //Abrir conexion de lectura
+        MaterialesSQLiteOpenHelper aux=new MaterialesSQLiteOpenHelper(contexto,"DBMateriales",null,1);
+        db=aux.getReadableDatabase();
+
+        //Cursor
+        sql="select * from Materiales where nombre ='"+nom+"'";
+        Cursor c=db.rawQuery(sql,null);
+
+        //Recorrido del cursor
+        if (c.moveToFirst()){
+            foto=c.getString(0);
+            codigo=c.getString(1);
+            tipo=c.getString(2);
+            nombre=c.getString(3);
+            precio=c.getString(4);
+            cantidad=c.getString(5);
+            m=new Material(foto,codigo,tipo,nombre,precio,cantidad);
+        }
+        db.close();
+        return m;
+    }
+
 }

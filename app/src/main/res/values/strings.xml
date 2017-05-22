@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Namantert</string>
+    <string name="app_name">AppFerre</string>
     <string name="cedula">Cedula</string>
     <string name="buscar">BUSCAR</string>
     <string name="nombre">Nombre</string>
@@ -35,7 +35,7 @@
     <string name="empleado">EMPLEADO</string>
     <string name="cliente">CLIENTE</string>
     <string name="material">MATERIAL</string>
-    <string name="registro_compras">REGISTR DE LAS COMPRAS</string>
+    <string name="registro_compras">REGISTRO DE LAS COMPRAS</string>
     <string-array name="opciones_registros">
         <item>@string/empleado</item>
         <item>@string/material</item>
@@ -129,6 +129,8 @@
     <string name="error_precio">Dijite el precio</string>
     <string name="error_cantidad">Dijite la cantidad</string>
     <string name="error_codigo_existente">El codigo dijitado ya existe</string>
+    <string name="error_codigo_no_existente">El codigo dijitado no existe</string>
+    <string name="haga_busqueda">Por favor haga la busqueda</string>
 
     <!--Mensajes de material-->
     <string name="material_guardado">Mateial guardado exitosamente</string>
@@ -143,5 +145,8 @@
     <string name="cliente_eliminado">Cliente eliminado exitosamente</string>
     <string name="cliente_modificado">Mateial modificado exitosamente</string>
     <string name="numero_compras">Compras</string>
+    <string name="nombre_cliente">Nombre del cliente</string>
+
+    <string name="compra_exitosa">Compra Exitosa</string>
 
 </resources>

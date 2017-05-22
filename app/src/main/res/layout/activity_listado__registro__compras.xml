@@ -13,6 +13,7 @@
         tools:layout_editor_absoluteY="8dp">
 
         <TableLayout
+            android:id="@+id/tblRegistroCompra"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:stretchColumns="*"
@@ -29,6 +30,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/numero" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nombre_cliente" />
 
                 <TextView
                     android:id="@+id/textView11"
