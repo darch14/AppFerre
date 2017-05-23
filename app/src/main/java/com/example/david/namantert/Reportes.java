@@ -36,8 +36,10 @@ public class Reportes extends AppCompatActivity {
                         mayorEdad();
                         break;
                     case 1:
+                        materialCaro();
                         break;
                     case 2:
+                        clienteComprador();
                         break;
                 }
             }
@@ -56,5 +58,29 @@ public class Reportes extends AppCompatActivity {
         new AlertDialog.Builder(this).setMessage(mensaje).setCancelable(true).show();
     }
 
-    
+    public void materialCaro(){
+        String mensaje;
+        ArrayList<Material> m=DatosMateriales.traerMateriales(getApplicationContext());
+        Material m2=m.get(0);
+        for (int i=1;i<m.size();i++){
+            if (Integer.parseInt(m2.getPrecio())<Integer.parseInt(m.get(i).getPrecio())){
+                m2=m.get(i);
+            }
+        }
+        mensaje=res.getString(R.string.mensaje_reporte2)+": "+m2.getNombre();
+        new AlertDialog.Builder(this).setMessage(mensaje).setCancelable(true).show();
+    }
+
+    public void clienteComprador(){
+        String mensaje;
+        ArrayList<Cliente> c=DatosClientes.traerClientes(getApplicationContext());
+        Cliente c2=c.get(0);
+        for (int i=0;i<c.size();i++){
+            if (Integer.parseInt(c2.getNcompras())<Integer.parseInt(c.get(i).getNcompras())){
+                c2=c.get(i);
+            }
+        }
+        mensaje=res.getString(R.string.mensaje_reporte3)+": "+c2.getNombre()+" "+c2.getApellido();
+        new AlertDialog.Builder(this).setMessage(mensaje).setCancelable(true).show();
+    }
 }

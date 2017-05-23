@@ -162,6 +162,8 @@
         <item>@string/reporte3</item>
     </string-array>
     <string name="mensaje_reporte1">El empleado con mayor edad es</string>
+    <string name="mensaje_reporte2">El material mas caro es</string>
+    <string name="mensaje_reporte3">El cliente con mas compras registradas es</string>
 
 
 </resources>
