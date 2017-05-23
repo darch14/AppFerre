@@ -137,6 +137,7 @@
     <string name="mensaje_confirmacion_material">¿Está seguro que desea eliminar este material?</string>
     <string name="material_eliminado">Mateial eliminado exitosamente</string>
     <string name="material_modificado">Mateial modificado exitosamente</string>
+    <string name="mensaje_nombre_existente">El nombre del material ya existe si desea ingresar mas modifique su cantidad</string>
 
     <!--Clientes-->
     <string name="cliente_guardado">Cliente guardado exitosamente</string>

@@ -87,12 +87,16 @@ public class Registrar_Material extends AppCompatActivity implements AdapterView
         return true;
     }
 
-    public boolean validarCodigoRepetido(){
-        ArrayList<Material> m=DatosMateriales.traerMateriales(getApplicationContext());
-        for (int i=0;i<m.size();i++){
-            if (m.get(i).getCodigo().equalsIgnoreCase(cajaCodigo.getText().toString())){
-                cajaCodigo.setError(res.getString(R.string.error_codigo_existente));
-                cajaCodigo.requestFocus();
+    public boolean validarRepetido(){
+        Material m=DatosMateriales.buscarMateriales(getApplicationContext(),cajaCodigo.getText().toString());
+        if (m!=null){
+            cajaCodigo.setError(res.getString(R.string.error_codigo_existente));
+            cajaCodigo.requestFocus();
+            return false;
+        }else {
+            Material m2=DatosMateriales.buscarPorNombreMateriales(getApplicationContext(),comboNombre.getSelectedItem().toString());
+            if (m2!=null){
+                new AlertDialog.Builder(this).setMessage(getResources().getString(R.string.mensaje_nombre_existente)).setCancelable(true).show();
                 return false;
             }
         }
@@ -103,7 +107,7 @@ public class Registrar_Material extends AppCompatActivity implements AdapterView
         String foto,codigo,precio,cantidad,tipo,nombre;
         Material m;
         if (validar()){
-            if (validarCodigoRepetido()){
+            if (validarRepetido()){
                 foto=String.valueOf(fotoMaterial());
                 codigo=cajaCodigo.getText().toString();
                 precio=cajaPrecio.getText().toString();

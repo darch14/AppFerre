@@ -27,7 +27,7 @@ public class Listado_Registro_Compras extends AppCompatActivity {
             TextView c3 = new TextView(this);
             TextView c4 = new TextView(this);
 
-            c1.setText(""+i+1);
+            c1.setText(String.valueOf(i+1));
             c2.setText(compras.get(i).getCliente());
             c3.setText(compras.get(i).getMaterial());
             c4.setText(compras.get(i).getPrecio());
