@@ -91,6 +91,10 @@ public class Compras_Registro_Clientes extends AppCompatActivity {
         }
     }
 
+    public void borrar(View v){
+        limpiar();
+    }
+
     public boolean validar(){
         if (cajaCedula.getText().toString().isEmpty()){
             cajaCedula.setError(res.getString(R.string.error_cajacedula));

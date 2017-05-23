@@ -21,6 +21,7 @@ public class Compra extends AppCompatActivity {
     private TableLayout tabla;
     private ArrayList<CarroCompra> carr;
     private Bundle b;
+    private Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class Compra extends AppCompatActivity {
         cajaPrecio=(TextView)findViewById(R.id.txtPrecioCompra);
         tabla=(TableLayout)findViewById(R.id.tblCarroCompra);
         b=getIntent().getExtras();
+        i=new Intent(this,Compras_Registro_Clientes.class);
         tabla();
     }
 
@@ -196,6 +198,8 @@ public class Compra extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), res.getString(R.string.compra_exitosa),
                         Toast.LENGTH_SHORT).show();
                 tabla();
+                startActivity(i);
+                finish();
             }
         }
     }

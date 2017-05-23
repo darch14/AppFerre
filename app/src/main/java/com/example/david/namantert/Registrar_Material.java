@@ -163,7 +163,7 @@ public class Registrar_Material extends AppCompatActivity implements AdapterView
                 if (m.getTipo().equalsIgnoreCase(res.getString(R.string.electricidad)))comboTipo.setSelection(1);
                 if (m.getTipo().equalsIgnoreCase(res.getString(R.string.tornilleria)))comboTipo.setSelection(2);
 
-                /*if (m.getNombre().equalsIgnoreCase(res.getString(R.string.cerradura_alta_ceguridad)))comboNombre.setSelection(0);
+                if (m.getNombre().equalsIgnoreCase(res.getString(R.string.cerradura_alta_ceguridad)))comboNombre.setSelection(0);
                 if (m.getNombre().equalsIgnoreCase(res.getString(R.string.cerradura_digital)))comboNombre.setSelection(1);
                 if (m.getNombre().equalsIgnoreCase(res.getString(R.string.cerradura_manija)))comboNombre.setSelection(2);
                 if (m.getNombre().equalsIgnoreCase(res.getString(R.string.cerradura_pomo)))comboNombre.setSelection(3);
@@ -175,7 +175,10 @@ public class Registrar_Material extends AppCompatActivity implements AdapterView
                 if (m.getNombre().equalsIgnoreCase(res.getString(R.string.chazos_anclajes)))comboNombre.setSelection(0);
                 if (m.getNombre().equalsIgnoreCase(res.getString(R.string.clavos)))comboNombre.setSelection(1);
                 if (m.getNombre().equalsIgnoreCase(res.getString(R.string.remaches)))comboNombre.setSelection(2);
-                if (m.getNombre().equalsIgnoreCase(res.getString(R.string.tornillos)))comboNombre.setSelection(3);*/
+                if (m.getNombre().equalsIgnoreCase(res.getString(R.string.tornillos)))comboNombre.setSelection(3);
+            }else {
+                Toast.makeText(getApplicationContext(), res.getString(R.string.error_codigo_no_existente),
+                        Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -210,6 +213,9 @@ public class Registrar_Material extends AppCompatActivity implements AdapterView
                 });
 
                 ventana.show();
+            }else {
+                Toast.makeText(getApplicationContext(), res.getString(R.string.error_codigo_no_existente),
+                        Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -230,6 +236,9 @@ public class Registrar_Material extends AppCompatActivity implements AdapterView
                 Toast.makeText(getApplicationContext(), res.getString(R.string.material_modificado),
                         Toast.LENGTH_SHORT).show();
                 limpiar();
+            }else {
+                Toast.makeText(getApplicationContext(), res.getString(R.string.error_codigo_no_existente),
+                        Toast.LENGTH_SHORT).show();
             }
         }
     }

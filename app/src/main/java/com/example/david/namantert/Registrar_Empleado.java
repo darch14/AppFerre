@@ -149,6 +149,9 @@ public class Registrar_Empleado extends AppCompatActivity {
 
                 if (e.getsexo().equalsIgnoreCase(res.getString(R.string.masculino)))rMasculino.setChecked(true);
                 else rFemanino.setChecked(true);
+            }else {
+                Toast.makeText(getApplicationContext(), res.getString(R.string.error_cedula_no_existente),
+                        Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -183,6 +186,9 @@ public class Registrar_Empleado extends AppCompatActivity {
                 });
 
                 ventana.show();
+            }else {
+                Toast.makeText(getApplicationContext(), res.getString(R.string.error_cedula_no_existente),
+                        Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -207,6 +213,9 @@ public class Registrar_Empleado extends AppCompatActivity {
 
 
                 limpiar();
+            }else {
+                Toast.makeText(getApplicationContext(), res.getString(R.string.error_cedula_no_existente),
+                        Toast.LENGTH_SHORT).show();
             }
         }
     }

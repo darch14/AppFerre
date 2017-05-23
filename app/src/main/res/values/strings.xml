@@ -80,6 +80,7 @@
     <string name="error_cajaedad">Por favor digite la edad</string>
     <string name="error_cajatelefono">Por favor digite la telefono</string>
     <string name="error_cedula_existente">La cedula ya existe</string>
+    <string name="error_cedula_no_existente">La cedula dijitada no existe</string>
     <string name="siguiente">SIGUIENTE</string>
     <string name="agregar">AGREGAR</string>
     <string name="comprar">COMPRAR</string>
@@ -149,5 +150,18 @@
     <string name="nombre_cliente">Nombre del cliente</string>
 
     <string name="compra_exitosa">Compra Exitosa</string>
+
+
+    <!-- Reportes -->
+    <string name="reporte1">Mostrar el empleado con mayor de edad</string>
+    <string name="reporte2">Mostrar el material mas caro</string>
+    <string name="reporte3">Mostrar el cliente con mas compras registradas</string>
+    <string-array name="opciones_reporte">
+        <item>@string/reporte1</item>
+        <item>@string/reporte2</item>
+        <item>@string/reporte3</item>
+    </string-array>
+    <string name="mensaje_reporte1">El empleado con mayor edad es</string>
+
 
 </resources>
